@@ -1,0 +1,184 @@
+/* Page */
+body {
+    margin: 0;
+    background-color: #f4f6f9;
+    font-family: Arial, sans-serif;
+    color: #212529;
+}
+
+/* Top Navbar */
+.top-navbar {
+    background-color: #09275e;
+    min-height: 70px;
+    padding: 12px 24px;
+}
+
+.top-navbar .navbar-brand {
+    font-size: 23px;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #172b40;
+    min-height: calc(100vh - 70px);
+}
+
+.sidebar .nav-link {
+    display: block;
+    color: #e2e8f0;
+    padding: 15px 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: #1765ed;
+    color: #ffffff;
+}
+
+/* Main Content */
+.main-content {
+    padding: 30px;
+    min-width: 0;
+}
+
+/* Dashboard Cards */
+.stat-card {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #dee2e6;
+}
+
+.stat-card .card-body {
+    min-height: 130px;
+}
+
+.stat-card h3 {
+    font-size: 29px;
+}
+
+.stat-icon {
+    width: 75px;
+    height: 75px;
+    min-width: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    color: white;
+    font-size: 34px;
+}
+
+.stat-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Blue Card */
+.stat-card.blue {
+    background-color: #f5faff;
+    border-color: #bfdbfe;
+}
+.blue .stat-icon {
+    background-color: #1765ed;
+}
+.blue .stat-link {
+    color: #1765ed;
+    background-color: #edf5ff;
+    border-color: #bfdbfe;
+}
+
+/* Green Card */
+.stat-card.green {
+    background-color: #f5fcf5;
+    border-color: #c5e7c8;
+}
+.green .stat-icon {
+    background-color: #36a448;
+}
+.green .stat-link {
+    color: #258c38;
+    background-color: #effaef;
+    border-color: #c5e7c8;
+}
+
+/* Orange Card */
+.stat-card.orange {
+    background-color: #fffaf0;
+    border-color: #ffe0a3;
+}
+.orange .stat-icon {
+    background-color: #f59e0b;
+}
+.orange .stat-link {
+    color: #d98200;
+    background-color: #fff6e5;
+    border-color: #ffe0a3;
+}
+
+/* Purple Card */
+.stat-card.purple {
+    background-color: #fcf8ff;
+    border-color: #e2c8f7;
+}
+.purple .stat-icon {
+    background-color: #7738bb;
+}
+.purple .stat-link {
+    color: #7738bb;
+    background-color: #f8efff;
+    border-color: #e2c8f7;
+}
+
+/* Students Table */
+.students-card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.students-card .table th,
+.students-card .table td {
+    padding: 14px;
+    white-space: nowrap;
+}
+
+.students-card .table th {
+    font-weight: 600;
+}
+
+/* Footer */
+.footer {
+    background-color: #e9edf3;
+    color: #495057;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .sidebar {
+        min-height: auto;
+    }
+
+    .main-content {
+        padding: 20px 12px;
+    }
+
+    .top-navbar .navbar-brand {
+        font-size: 18px;
+        white-space: normal;
+    }
+
+    .top-navbar .container-fluid {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+

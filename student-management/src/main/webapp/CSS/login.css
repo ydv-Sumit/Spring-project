@@ -1,0 +1,373 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #dce8ff, #eee5ff 50%, #d8f7f0);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* 3D decorative shapes */
+.shape {
+    position: fixed;
+    z-index: 0;
+    pointer-events: none;
+    animation: float 7s ease-in-out infinite;
+}
+
+.shape-one {
+    width: 115px;
+    height: 115px;
+    top: 8%;
+    left: 8%;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #60a5fa, #4f46e5);
+    transform: rotate(-20deg);
+    box-shadow: 15px 20px 35px rgba(79, 70, 229, 0.25);
+}
+
+.shape-two {
+    width: 95px;
+    height: 95px;
+    top: 12%;
+    right: 10%;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #99f6e4, #0d9488);
+    box-shadow: 12px 18px 30px rgba(13, 148, 136, 0.25);
+    animation-delay: -2s;
+}
+
+.shape-three {
+    width: 75px;
+    height: 75px;
+    bottom: 13%;
+    left: 15%;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #c4b5fd, #7c3aed);
+    transform: rotate(25deg);
+    box-shadow: 12px 18px 30px rgba(124, 58, 237, 0.25);
+    animation-delay: -3s;
+}
+
+.shape-four {
+    width: 65px;
+    height: 65px;
+    bottom: 10%;
+    right: 12%;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #93c5fd, #2563eb);
+    box-shadow: 10px 15px 25px rgba(37, 99, 235, 0.25);
+    animation-delay: -1s;
+}
+
+.shape-five {
+    width: 38px;
+    height: 38px;
+    top: 28%;
+    left: 25%;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f0abfc, #a855f7);
+    transform: rotate(35deg);
+}
+
+.shape-six {
+    width: 48px;
+    height: 48px;
+    right: 24%;
+    bottom: 25%;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #5eead4, #0f766e);
+    transform: rotate(-18deg);
+    animation-delay: -4s;
+}
+
+@keyframes float {
+    0%, 100% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 0 -18px;
+    }
+}
+
+/* Main login card */
+.login-container {
+    width: 100%;
+    max-width: 1050px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 22px;
+    background: #ffffff;
+    box-shadow: 0 30px 80px rgba(28, 39, 80, 0.18);
+}
+
+/* Left panel */
+.brand-panel {
+    min-height: 590px;
+    padding: 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffff;
+    background: linear-gradient(145deg, #102c36, #164e63);
+}
+
+.brand-header {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.brand-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #b9eee0;
+    color: #123943;
+    font-size: 25px;
+}
+
+.brand-header h5 {
+    margin: 0 0 4px;
+    font-weight: 700;
+}
+
+.brand-header small {
+    color: #b5d3d9;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.brand-content {
+    margin: 40px 0;
+}
+
+.welcome-label,
+.form-label-top {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.welcome-label {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #8ee6d1;
+}
+
+.brand-content h1 {
+    font-size: clamp(27px, 3vw, 37px);
+    font-weight: 750;
+    line-height: 1.25;
+    letter-spacing: -1px;
+}
+
+.brand-content .highlight {
+    color: #9ee7d5;
+}
+
+.brand-content p {
+    max-width: 330px;
+    margin: 22px 0;
+    color: #c7dce1;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.feature {
+    margin-top: 13px;
+    color: #e1f3f3;
+    font-size: 13px;
+}
+
+.feature i {
+    margin-right: 9px;
+    color: #8ee6d1;
+}
+
+.brand-footer {
+    color: #b5d3d9;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* Right panel */
+.form-panel {
+    min-height: 590px;
+    padding: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 350px;
+}
+
+.form-label-top {
+    color: #168477;
+}
+
+.login-box h2 {
+    margin: 12px 0 8px;
+    color: #172d39;
+    font-size: 31px;
+    font-weight: 750;
+    letter-spacing: -0.8px;
+}
+
+.subtitle {
+    margin-bottom: 34px;
+    color: #7b8794;
+    font-size: 14px;
+}
+
+.form-label {
+    margin-bottom: 9px;
+    color: #334155;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 49px;
+    padding-left: 13px;
+    border: 1px solid #dce4ec;
+    border-radius: 9px;
+    background: #ffffff;
+}
+
+.input-wrapper > i {
+    color: #8292a5;
+}
+
+.input-wrapper .form-control {
+    min-height: 47px;
+    border: none;
+    box-shadow: none;
+    font-size: 13px;
+}
+
+.input-wrapper:focus-within {
+    border-color: #168477;
+    box-shadow: 0 0 0 3px rgba(22, 132, 119, 0.10);
+}
+
+.password-toggle {
+    height: 47px;
+    padding: 0 14px;
+    border: none;
+    background: transparent;
+    color: #718096;
+}
+
+.login-btn {
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(100deg, #176b62, #168b85);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 650;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.login-btn:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(22, 132, 119, 0.25);
+}
+
+.security-note {
+    margin-top: 25px;
+    color: #7b8794;
+    font-size: 12px;
+    text-align: center;
+}
+
+.security-note i {
+    margin-right: 5px;
+    color: #168477;
+}
+
+.mobile-logo {
+    display: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 767px) {
+    body {
+        padding: 18px;
+    }
+
+    .shape-one {
+        width: 65px;
+        height: 65px;
+        left: 2%;
+    }
+
+    .shape-two {
+        width: 55px;
+        height: 55px;
+        right: 3%;
+    }
+
+    .shape-three {
+        width: 50px;
+        height: 50px;
+        left: 3%;
+    }
+
+    .shape-four {
+        width: 45px;
+        height: 45px;
+        right: 3%;
+    }
+
+    .login-container {
+        max-width: 430px;
+        border-radius: 16px;
+    }
+
+    .brand-panel {
+        display: none;
+    }
+
+    .form-panel {
+        min-height: 520px;
+        padding: 32px 24px;
+    }
+
+    .mobile-logo {
+        display: block;
+        margin-bottom: 18px;
+        color: #176b62;
+        font-size: 42px;
+        text-align: center;
+    }
+
+    .login-box h2 {
+        font-size: 27px;
+    }
+}
